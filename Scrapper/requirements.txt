@@ -1,0 +1,9 @@
+cloudscraper>=1.2.71
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
+requests>=2.31.0
+chardet>=5.2.0
+selenium>=4.15.2
+webdriver-manager>=4.0.1
+yt-dlp>=2023.11.16
+curl_cffi
