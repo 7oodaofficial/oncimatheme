@@ -1,0 +1,762 @@
+/* ── ONWatch Admin Global ── */
+:root {
+  --onwatch-purple: #bf5bf3;
+  --onwatch-purple-dark: #a84adf;
+}
+
+/* ── Admin Menu Highlights ── */
+#adminmenu li.menu-top > a[href*="onwatch-settings"] .wp-menu-name,
+#adminmenu li.menu-top > a[href*="onwatch-settings"] .wp-menu-image {
+  color: var(--onwatch-purple) !important;
+}
+#adminmenu li.menu-top:hover > a[href*="onwatch-settings"] .wp-menu-name,
+#adminmenu li.menu-top.current > a[href*="onwatch-settings"] .wp-menu-name {
+  color: #fff !important;
+}
+#adminmenu .wp-submenu li a[href*="onwatch-settings"],
+#adminmenu .wp-submenu li a[href*="onwatch-theme-settings"],
+#adminmenu .wp-submenu li a[href*="onwatch-episodes"],
+#adminmenu .wp-submenu li a[href*="onwatch-reports"] {
+  padding-left: 20px;
+  position: relative;
+}
+#adminmenu .wp-submenu li a[href*="onwatch-theme-settings"] {
+  border-left: 3px solid var(--onwatch-purple);
+  background: rgba(191, 91, 243, 0.08);
+  font-weight: 600;
+}
+
+/* ── TMDB Grabber ── */
+#tmdb_grabber {
+  background: #f0f0f1;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #c3c4c7;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+#tmdb_grabber label { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+#tmdb_grabber label span span { color: var(--onwatch-purple); }
+#tmdb_grabber input[type=text] { width: 120px; }
+#tmdb_grabber .ttp { font-size: 12px; color: #666; cursor: help; }
+#tmdb_grabber .ttp span span { font-weight: 600; }
+.tr_grabber_content th { width: 160px; }
+.tr_grabber_content td input[type=text],
+.tr_grabber_content td input[type=date] { width: 100%; max-width: 400px; }
+.tr_grabber_content textarea { width: 100%; max-width: 600px; }
+.links_options { margin: 12px 0; display: flex; gap: 8px; }
+.links_options .button .dashicons { margin-top: 3px; }
+.TrGrabber-tblcn { overflow-x: auto; }
+.TrGrabber-tbl th { font-weight: 600; }
+.tr-grabber-row td { vertical-align: middle; }
+.tr-grabber-row .moved { cursor: move; text-align: center; }
+.tr-grabber-row .trgrabberbt_a.current,
+.tr-grabber-row .trgrabberbt_b.current { background: var(--onwatch-purple); color: #fff; border-color: var(--onwatch-purple-dark); }
+.tr-grabber-row .trgrabberbt_a,
+.tr-grabber-row .trgrabberbt_b { padding: 2px 6px; min-width: 36px; }
+.tr-grabber-row select { max-width: 120px; }
+.tdoptns { display: flex; gap: 4px; align-items: center; }
+.tdoptns input { width: 90px; }
+.tridfrm { margin: 12px 0; }
+#trgrabber_seasons_lg .lgtbxcn { max-width: 180px; }
+
+/* ── ONWatch Theme Settings Page ── */
+.onwatch-settings-wrap {
+  margin: 20px 20px 0 2px;
+  max-width: 1200px;
+}
+.onwatch-settings-wrap h1 {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--onwatch-purple);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+/* Tab Navigation */
+.onwatch-settings-tabs {
+  margin-bottom: 0;
+  border-bottom: 1px solid #dcdcde;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  background: #f0f0f1;
+  padding: 8px 8px 0;
+  border-radius: 6px 6px 0 0;
+}
+.onwatch-settings-tabs .nav-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  border-bottom: none;
+  margin: 0;
+  background: transparent;
+  color: #555;
+  border-radius: 4px 4px 0 0;
+  white-space: nowrap;
+}
+.onwatch-settings-tabs .nav-tab .dashicons {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
+.onwatch-settings-tabs .nav-tab-active {
+  background: #fff;
+  color: var(--onwatch-purple);
+  border-color: #dcdcde;
+  font-weight: 600;
+  position: relative;
+}
+.onwatch-settings-tabs .nav-tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #fff;
+}
+.onwatch-settings-tabs .nav-tab-active .dashicons {
+  opacity: 1;
+  color: var(--onwatch-purple);
+}
+.onwatch-settings-tabs .nav-tab:not(.nav-tab-active):hover {
+  background: rgba(191, 91, 243, 0.06);
+  color: var(--onwatch-purple);
+}
+
+/* Content Panel */
+.onwatch-settings-content {
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-top: none;
+  padding: 30px;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Form Table - Card Style Sections */
+.onwatch-settings-content .form-table {
+  margin-top: 0;
+}
+.onwatch-settings-content .form-table tbody {
+  display: grid;
+  gap: 2px;
+}
+.onwatch-settings-content .form-table tr {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  margin: 0;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  transition: border-color 0.2s;
+}
+.onwatch-settings-content .form-table tr:hover {
+  border-color: var(--onwatch-purple);
+}
+.onwatch-settings-content .form-table th {
+  width: 240px;
+  font-weight: 600;
+  padding: 0 20px 0 0;
+  font-size: 13px;
+  color: #1d2327;
+  display: flex;
+  align-items: center;
+}
+.onwatch-settings-content .form-table td {
+  padding: 0;
+  flex: 1;
+  min-width: 280px;
+}
+.onwatch-settings-content .form-table td input.regular-text {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 4px;
+  border: 1px solid #dcdcde;
+  padding: 6px 10px;
+}
+.onwatch-settings-content .form-table td input.regular-text:focus {
+  border-color: var(--onwatch-purple);
+  box-shadow: 0 0 0 1px var(--onwatch-purple);
+}
+.onwatch-settings-content .form-table td textarea.large-text {
+  width: 100%;
+  max-width: 700px;
+  min-height: 120px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 13px;
+  direction: ltr;
+  text-align: left;
+  border-radius: 4px;
+  border: 1px solid #dcdcde;
+}
+.onwatch-settings-content .form-table td textarea.large-text:focus {
+  border-color: var(--onwatch-purple);
+  box-shadow: 0 0 0 1px var(--onwatch-purple);
+}
+.onwatch-settings-content .form-table td p.description {
+  margin-top: 6px;
+  font-style: italic;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.onwatch-settings-content .form-table td label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+.onwatch-settings-content .form-table td input[type="checkbox"] {
+  margin: 0;
+}
+.onwatch-settings-content .form-table td select {
+  min-width: 200px;
+  border-radius: 4px;
+  border: 1px solid #dcdcde;
+  padding: 4px 8px;
+}
+
+/* Submit Button */
+.onwatch-settings-content .submit {
+  padding: 24px 0 0;
+  margin-top: 24px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-start;
+}
+.onwatch-settings-content .submit .button-primary {
+  background: var(--onwatch-purple);
+  border-color: var(--onwatch-purple);
+  padding: 6px 36px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.onwatch-settings-content .submit .button-primary:hover {
+  background: var(--onwatch-purple-dark);
+  border-color: var(--onwatch-purple-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(191, 91, 243, 0.3);
+}
+.onwatch-settings-content input[type="file"] {
+  display: block;
+  margin-bottom: 10px;
+}
+#onwatch-export-settings,
+#onwatch-import-settings {
+  margin-top: 4px;
+}
+
+/* ── Episodes Management Page ── */
+.onwatch-episodes-wrap h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.onwatch-title-count {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+  background: #f0f0f1;
+  padding: 3px 12px;
+  border-radius: 12px;
+}
+
+/* Stats Bar */
+.onwatch-stats-bar {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.onwatch-stat {
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 8px;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  flex: 1;
+}
+.onwatch-stat-num {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1d2327;
+}
+.onwatch-stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+  margin-top: 4px;
+}
+.onwatch-stat--success .onwatch-stat-num { color: #22c55e; }
+.onwatch-stat--warn .onwatch-stat-num { color: #f59e0b; }
+
+/* Toolbar */
+.onwatch-episodes-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+.onwatch-filter-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.onwatch-select {
+  max-width: 260px;
+}
+.onwatch-search-input {
+  min-width: 180px;
+}
+.onwatch-btn-danger {
+  color: #dc3232 !important;
+  border-color: #dc3232 !important;
+}
+.onwatch-btn-danger:hover {
+  background: #dc3232 !important;
+  color: #fff !important;
+}
+
+/* Layout: sidebar + main */
+.onwatch-episodes-sidebar {
+  float: right;
+  width: 220px;
+  margin-right: 20px;
+}
+.onwatch-episodes-main {
+  overflow: hidden;
+}
+.onwatch-sidebar-section {
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.onwatch-sidebar-section h3 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+}
+.onwatch-season-list {
+  margin: 0;
+}
+.onwatch-season-list li {
+  margin: 0;
+}
+.onwatch-season-list a {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #2271b1;
+}
+.onwatch-season-list a:hover,
+.onwatch-season-list a.current {
+  background: #f0f6fc;
+  color: #1d2327;
+  font-weight: 600;
+}
+.onwatch-season-list a.current::before {
+  content: '▸ ';
+  color: var(--onwatch-purple);
+}
+.onwatch-quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.onwatch-muted {
+  color: #999;
+  font-size: 12px;
+}
+
+/* Episodes Table */
+.onwatch-episodes-table {
+  margin-top: 0;
+}
+.onwatch-col-cb { width: 36px; }
+.onwatch-col-id { width: 50px; }
+.onwatch-col-still { width: 90px; }
+.onwatch-col-series { width: 180px; }
+.onwatch-col-num { width: 50px; text-align: center; }
+.onwatch-col-links { width: 60px; text-align: center; }
+.onwatch-col-actions { width: 140px; }
+.onwatch-row-warning { background: #fff8e5 !important; }
+.onwatch-link-count {
+  display: inline-block;
+  min-width: 24px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #e5e7eb;
+  color: #555;
+}
+.onwatch-link-count[data-count="0"] { background: #fef3c7; color: #92400e; }
+.onwatch-link-count[data-count^="1"], .onwatch-link-count[data-count^="2"], .onwatch-link-count[data-count^="3"] { background: #d1fae5; color: #065f46; }
+
+/* ── Episode Edit Page ── */
+.onwatch-episode-edit-wrap {
+  max-width: 1200px;
+}
+.onwatch-edit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.onwatch-edit-header h1 {
+  margin: 0;
+}
+.onwatch-nav-buttons {
+  display: flex;
+  gap: 6px;
+}
+.onwatch-edit-breadcrumbs {
+  margin: 12px 0 20px;
+  font-size: 13px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.onwatch-edit-breadcrumbs .sep {
+  color: #ccc;
+}
+.onwatch-edit-breadcrumbs a {
+  text-decoration: none;
+}
+.onwatch-edit-status {
+  background: var(--onwatch-purple);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+/* Edit Form Grid */
+.onwatch-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 960px) {
+  .onwatch-edit-grid { grid-template-columns: 1fr; }
+}
+
+.onwatch-edit-panel {
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.onwatch-edit-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dcdcde;
+}
+.onwatch-edit-panel-header h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1;
+}
+.onwatch-edit-panel-header .dashicons {
+  color: var(--onwatch-purple);
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+.onwatch-edit-panel-body {
+  padding: 16px;
+}
+
+/* Fields */
+.onwatch-field {
+  margin-bottom: 16px;
+}
+.onwatch-field label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #1d2327;
+}
+.onwatch-field input.regular-text,
+.onwatch-field textarea.large-text {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 4px;
+  border: 1px solid #dcdcde;
+  padding: 6px 10px;
+}
+.onwatch-field input.regular-text:focus,
+.onwatch-field textarea.large-text:focus {
+  border-color: var(--onwatch-purple);
+  box-shadow: 0 0 0 1px var(--onwatch-purple);
+}
+.onwatch-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 782px) {
+  .onwatch-field-row { grid-template-columns: 1fr; }
+}
+.onwatch-field-row .onwatch-field input {
+  width: 100%;
+}
+.onwatch-field-with-preview {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.onwatch-field-with-preview input {
+  flex: 1;
+}
+.onwatch-preview-img {
+  max-width: 120px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Links Panel */
+.onwatch-links-panel {
+  padding: 12px;
+}
+.onwatch-links-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.onwatch-links-table th {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.onwatch-links-table td {
+  vertical-align: middle;
+  padding: 4px 6px;
+}
+.onwatch-links-table select {
+  max-width: 100px;
+  font-size: 12px;
+}
+.onwatch-link-url {
+  width: 100%;
+  min-width: 140px;
+  font-size: 12px;
+}
+.onwatch-link-date {
+  width: 80px;
+  font-size: 11px;
+}
+.onwatch-link-type {
+  width: 60px;
+}
+.onwatch-links-empty {
+  text-align: center;
+  padding: 24px;
+  color: #999;
+  font-size: 13px;
+}
+
+/* Edit Footer */
+.onwatch-edit-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #dcdcde;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .onwatch-episodes-sidebar {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .onwatch-season-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .onwatch-season-list a {
+    padding: 4px 10px;
+    background: #f0f0f1;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  .onwatch-col-series { display: none; }
+}
+@media (max-width: 782px) {
+  .onwatch-settings-tabs .nav-tab { padding: 8px 12px; font-size: 12px; }
+  .onwatch-settings-tabs .nav-tab .dashicons { display: none; }
+  .onwatch-settings-content { padding: 16px; }
+  .onwatch-settings-content .form-table th { width: 100%; padding: 0 0 8px; }
+  .onwatch-settings-content .form-table td { min-width: auto; }
+  .onwatch-filter-form { flex-direction: column; align-items: stretch; }
+  .onwatch-filter-form select,
+  .onwatch-filter-form input,
+  .onwatch-filter-form button { width: 100%; max-width: 100%; }
+  .onwatch-stats-bar { flex-direction: column; }
+  .onwatch-stat { flex: none; }
+  .onwatch-col-still { display: none; }
+  .onwatch-col-id { display: none; }
+  .onwatch-col-links { display: none; }
+  .onwatch-edit-header { flex-direction: column; align-items: flex-start; }
+  .onwatch-edit-breadcrumbs .onwatch-edit-status { margin-left: 0; }
+}
+@media (max-width: 480px) {
+  .onwatch-col-actions { display: none; }
+  .onwatch-col-series { display: none; }
+}
+
+/* ── Manual Seasons & Episodes Meta Box ── */
+.onwatch-manual-episodes .onwatch-me-section {
+  margin-bottom: 16px;
+}
+.onwatch-manual-episodes .onwatch-me-section h4 {
+  margin: 0 0 8px;
+  padding: 8px 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+  border-bottom: 1px solid #e0e0e0;
+}
+.onwatch-manual-episodes .form-table th {
+  width: 140px;
+  padding: 6px 10px 6px 0;
+}
+.onwatch-manual-episodes .form-table td {
+  padding: 6px 0;
+}
+.onwatch-ms-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background: #fafafa;
+}
+.onwatch-ms-season {
+  margin-bottom: 12px;
+  padding: 8px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+.onwatch-ms-season-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.onwatch-ms-episodes {
+  margin: 4px 0 0 20px;
+  list-style: disc;
+}
+.onwatch-ms-episodes li {
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.onwatch-ms-ep-num {
+  font-weight: 600;
+  color: var(--onwatch-purple);
+  font-size: 11px;
+  background: rgba(191, 91, 243, 0.08);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+/* ── Bulk Link Adder Meta Box ── */
+.onwatch-bulk-links .form-table th {
+  width: 140px;
+  padding: 6px 10px 6px 0;
+}
+.onwatch-bulk-links .form-table td {
+  padding: 6px 0;
+}
+#bl_links {
+  max-width: 600px;
+  font-family: Consolas, Monaco, monospace;
+}
+
+/* ── Quick Links Admin Page ── */
+.onwatch-quick-links-wrap {
+  max-width: 900px;
+}
+.onwatch-ql-tabs {
+  margin: 16px 0;
+  display: flex;
+  gap: 8px;
+}
+.onwatch-ql-tab.active {
+  background: var(--onwatch-purple);
+  border-color: var(--onwatch-purple-dark);
+  color: #fff;
+}
+.onwatch-ql-panel {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+.onwatch-ql-panel .form-table {
+  margin: 0;
+}
+.onwatch-ql-panel .form-table th {
+  width: 150px;
+  padding: 6px 10px 6px 0;
+}
+.onwatch-ql-panel .form-table td {
+  padding: 6px 0;
+}
+.onwatch-ql-select {
+  max-width: 400px;
+}

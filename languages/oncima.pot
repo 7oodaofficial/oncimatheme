@@ -1,0 +1,423 @@
+# ONCima Theme - Translation Template
+# Copyright (C) 2026 ONCima
+msgid ""
+msgstr ""
+"Project-Id-Version: ONCima 4.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "القائمة"
+msgstr ""
+
+msgid "بحث"
+msgstr ""
+
+msgid "تسجيل الدخول"
+msgstr ""
+
+msgid "إنشاء حساب"
+msgstr ""
+
+msgid "ابحث عن فيلم أو مسلسل..."
+msgstr ""
+
+msgid "فيلم"
+msgstr ""
+
+msgid "مسلسل"
+msgstr ""
+
+msgid "عرض الكل ←"
+msgstr ""
+
+msgid "الرئيسية"
+msgstr ""
+
+msgid "أفلام"
+msgstr ""
+
+msgid "مسلسلات"
+msgstr ""
+
+msgid "جديد"
+msgstr ""
+
+msgid "مشاهدة"
+msgstr ""
+
+msgid "مفضلة"
+msgstr ""
+
+msgid "تحميل"
+msgstr ""
+
+msgid "تحميل المزيد"
+msgstr ""
+
+msgid "جاري التحميل..."
+msgstr ""
+
+msgid "مشاهدة الآن"
+msgstr ""
+
+msgid "التفاصيل"
+msgstr ""
+
+msgid "أحدث الأفلام"
+msgstr ""
+
+msgid "أحدث المسلسلات"
+msgstr ""
+
+msgid "الأكثر مشاهدة هذا الأسبوع"
+msgstr ""
+
+msgid "تصفح حسب النوع"
+msgstr ""
+
+msgid "آخر الحلقات المضافة"
+msgstr ""
+
+msgid "مشاهدة مستمرة"
+msgstr ""
+
+msgid "مسح"
+msgstr ""
+
+msgid "إضافة للمفضلة"
+msgstr ""
+
+msgid "مشاركة"
+msgstr ""
+
+msgid "مقط دعائي"
+msgstr ""
+
+msgid "تقييمك:"
+msgstr ""
+
+msgid "طاقم العمل"
+msgstr ""
+
+msgid "المعلومات"
+msgstr ""
+
+msgid "المخرج"
+msgstr ""
+
+msgid "الدولة"
+msgstr ""
+
+msgid "المدة"
+msgstr ""
+
+msgid "تاريخ الإصدار"
+msgstr ""
+
+msgid "أفلام مشابهة"
+msgstr ""
+
+msgid "مسلسلات مشابهة"
+msgstr ""
+
+msgid "المواسم والحلقات"
+msgstr ""
+
+msgid "خاص"
+msgstr ""
+
+msgid "الموسم %d"
+msgstr ""
+
+msgid "عرض جميع المواسم"
+msgstr ""
+
+msgid "الحلقة السابقة"
+msgstr ""
+
+msgid "الحلقة التالية"
+msgstr ""
+
+msgid "حلقات الموسم"
+msgstr ""
+
+msgid "إنتاج %d"
+msgstr ""
+
+msgid "حرف %s"
+msgstr ""
+
+msgid "نتائج البحث عن: %s"
+msgstr ""
+
+msgid "نتيجة"
+msgstr ""
+
+msgid "لا توجد نتائج"
+msgstr ""
+
+msgid "لا توجد نتائج تطابق بحثك"
+msgstr ""
+
+msgid "وسم: %s"
+msgstr ""
+
+msgid "عذراً، الصفحة التي تبحث عنها غير موجودة"
+msgstr ""
+
+msgid "العودة إلى الرئيسية"
+msgstr ""
+
+msgid "روابط التحميل"
+msgstr ""
+
+msgid "الإبلاغ عن مشكلة"
+msgstr ""
+
+msgid "اختر نوع المشكلة"
+msgstr ""
+
+msgid "الرابط لا يعمل"
+msgstr ""
+
+msgid "محتوى خاطئ"
+msgstr ""
+
+msgid "جودة سيئة"
+msgstr ""
+
+msgid "أخرى"
+msgstr ""
+
+msgid "تفاصيل إضافية (اختياري)"
+msgstr ""
+
+msgid "إرسال البلاغ"
+msgstr ""
+
+msgid "شكراً! تم إرسال البلاغ"
+msgstr ""
+
+msgid "يمكنك الإبلاغ مرة واحدة كل 10 دقائق"
+msgstr ""
+
+msgid "بيانات غير صالحة"
+msgstr ""
+
+msgid "يرجى تسجيل الدخول أولاً"
+msgstr ""
+
+msgid "تقييم غير صالح"
+msgstr ""
+
+msgid "تم حفظ تقييمك"
+msgstr ""
+
+msgid "اترك تعليقاً"
+msgstr ""
+
+msgid "إرسال"
+msgstr ""
+
+msgid "تعليقك..."
+msgstr ""
+
+msgid "الاسم"
+msgstr ""
+
+msgid "البريد الإلكتروني"
+msgstr ""
+
+msgid "التعليقات مغلقة"
+msgstr ""
+
+msgid "إغلاق"
+msgstr ""
+
+msgid "دخول"
+msgstr ""
+
+msgid "اسم المستخدم"
+msgstr ""
+
+msgid "كلمة المرور"
+msgstr ""
+
+msgid "تصفية"
+msgstr ""
+
+msgid "النوع"
+msgstr ""
+
+msgid "البلد"
+msgstr ""
+
+msgid "السنة"
+msgstr ""
+
+msgid "الأحدث"
+msgstr ""
+
+msgid "التقييم"
+msgstr ""
+
+msgid "الترتيب الأبجدي"
+msgstr ""
+
+msgid "لا توجد أفلام"
+msgstr ""
+
+msgid "لا توجد مسلسلات"
+msgstr ""
+
+msgid "%d مواسم"
+msgstr ""
+
+msgid "%d حلقة"
+msgstr ""
+
+msgid "%d دقيقة"
+msgstr ""
+
+msgid "%d تقييم"
+msgstr ""
+
+msgid "سيرفر %d"
+msgstr ""
+
+msgid "مسارات التنقل"
+msgstr ""
+
+msgid "أفلام %s"
+msgstr ""
+
+msgid "مسلسلات %s"
+msgstr ""
+
+msgid "نتائج البحث عن: %s"
+msgstr ""
+
+msgid "تمت الإضافة إلى المفضلة ✓"
+msgstr ""
+
+msgid "تمت الإزالة من المفضلة"
+msgstr ""
+
+msgid "تم النسخ ✓"
+msgstr ""
+
+msgid "مستمر"
+msgstr ""
+
+msgid "منتهي"
+msgstr ""
+
+msgid "الحلقات ↓"
+msgstr ""
+
+msgid "Menu Header"
+msgstr ""
+
+msgid "Menu Footer"
+msgstr ""
+
+msgid "Site Identity"
+msgstr ""
+
+msgid "Logo"
+msgstr ""
+
+msgid "Logo Width (px)"
+msgstr ""
+
+msgid "Accent Color"
+msgstr ""
+
+msgid "Homepage"
+msgstr ""
+
+msgid "Hero Slides Count"
+msgstr ""
+
+msgid "Latest Movies Count"
+msgstr ""
+
+msgid "Latest Series Count"
+msgstr ""
+
+msgid "Trending Count"
+msgstr ""
+
+msgid "Latest Episodes Count"
+msgstr ""
+
+msgid "Archive"
+msgstr ""
+
+msgid "Movies per page"
+msgstr ""
+
+msgid "Series per page"
+msgstr ""
+
+msgid "Episodes per page"
+msgstr ""
+
+msgid "Enable Infinite Scroll"
+msgstr ""
+
+msgid "Auth"
+msgstr ""
+
+msgid "Disable Auth (hide login/register)"
+msgstr ""
+
+msgid "Open Register Tab by Default"
+msgstr ""
+
+msgid "Footer"
+msgstr ""
+
+msgid "About Text"
+msgstr ""
+
+msgid "Copyright"
+msgstr ""
+
+msgid "Reports"
+msgstr ""
+
+msgid "All reports cleared."
+msgstr ""
+
+msgid "Clear All"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Post"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "No reports yet."
+msgstr ""
+
+msgid "السابق"
+msgstr ""
+
+msgid "التالي"
+msgstr ""

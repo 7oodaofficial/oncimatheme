@@ -1,0 +1,31 @@
+<?php
+defined('ABSPATH') || exit;
+
+if (!defined('TR_GRABBER_VERSION'))      define('TR_GRABBER_VERSION', '2.2');
+if (!defined('TR_GRABBER_ORIGINAL_TITLE')) define('TR_GRABBER_ORIGINAL_TITLE', 'field_title');
+if (!defined('TR_GRABBER_FIELD_TRAILER'))  define('TR_GRABBER_FIELD_TRAILER', 'field_trailer');
+if (!defined('TR_GRABBER_FIELD_ID'))       define('TR_GRABBER_FIELD_ID', 'field_id');
+if (!defined('TR_GRABBER_FIELD_IMDBID'))   define('TR_GRABBER_FIELD_IMDBID', 'field_imdbid');
+if (!defined('TR_GRABBER_FIELD_DATE'))     define('TR_GRABBER_FIELD_DATE', 'field_date');
+if (!defined('TR_GRABBER_FIELD_YEAR'))     define('TR_GRABBER_FIELD_YEAR', 'field_release_year');
+if (!defined('TR_GRABBER_FIELD_RUNTIME'))  define('TR_GRABBER_FIELD_RUNTIME', 'field_runtime');
+if (!defined('TR_GRABBER_FIELD_BACKDROP')) define('TR_GRABBER_FIELD_BACKDROP', 'field_backdrop');
+if (!defined('TR_GRABBER_FIELD_RATING'))   define('TR_GRABBER_FIELD_RATING', 'rating');
+if (!defined('TR_GRABBER_FIELD_BACKDROP_HOTLINK')) define('TR_GRABBER_FIELD_BACKDROP_HOTLINK', 'backdrop_hotlink');
+if (!defined('TR_GRABBER_POSTER_HOTLINK')) define('TR_GRABBER_POSTER_HOTLINK', 'poster_hotlink');
+if (!defined('TR_GRABBER_POSTER'))          define('TR_GRABBER_POSTER', 'poster');
+if (!defined('TR_GRABBER_FIELD_INPRODUCTION')) define('TR_GRABBER_FIELD_INPRODUCTION', 'field_inproduction');
+if (!defined('TR_GRABBER_FIELD_STATUS'))    define('TR_GRABBER_FIELD_STATUS', 'status');
+if (!defined('TR_GRABBER_FIELD_NEPISODES')) define('TR_GRABBER_FIELD_NEPISODES', 'number_of_episodes');
+if (!defined('TR_GRABBER_FIELD_NSEASONS'))  define('TR_GRABBER_FIELD_NSEASONS', 'number_of_seasons');
+if (!defined('TR_GRABBER_FIELD_DATE_LAST')) define('TR_GRABBER_FIELD_DATE_LAST', 'field_date_last');
+if (!defined('TR_GRABBER_SLUG_MOVIES'))     define('TR_GRABBER_SLUG_MOVIES', 'movie');
+if (!defined('TR_GRABBER_SLUG_SERIES'))     define('TR_GRABBER_SLUG_SERIES', 'serie');
+if (!defined('TR_GRABBER_FIELD_LETTERS'))   define('TR_GRABBER_FIELD_LETTERS', 'letter');
+if (!defined('TR_GRABBER_PREFIX_SEASON'))   define('TR_GRABBER_PREFIX_SEASON', 'season');
+if (!defined('TR_GRABBER_PREFIX_EPISODE'))  define('TR_GRABBER_PREFIX_EPISODE', 'episode');
+if (!defined('TR_GRABBER_PREFIX_CAST'))     define('TR_GRABBER_PREFIX_CAST', 'cast');
+if (!defined('TR_GRABBER_PREFIX_CASTTV'))   define('TR_GRABBER_PREFIX_CASTTV', 'cast_tv');
+if (!defined('TR_GRABBER_PREFIX_DIRECTOR')) define('TR_GRABBER_PREFIX_DIRECTOR', 'director');
+if (!defined('TR_GRABBER_PREFIX_DIRECTORTV')) define('TR_GRABBER_PREFIX_DIRECTORTV', 'director_tv');
+if (!defined('TR_GRABBER_PREFIX_YEAR'))     define('TR_GRABBER_PREFIX_YEAR', 'release');
